@@ -1,9 +1,10 @@
-const express=requires("express");
+const express=require("express");
 
 const PORT=8080;
 const app = express();
 
 app.get("/", (req, res)=>{
+    console.log(req.method+" from IP:"+req.ip);
     res.send("Hi there!");    
 });
 
