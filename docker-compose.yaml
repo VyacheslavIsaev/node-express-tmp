@@ -1,13 +1,14 @@
 ---
-version: 2.0
+version: '2'
 
 services:
+
   app:
-    from:
-      file: Dockerfile
-      target: .
+    build:
+      dockerfile: Dockerfile
+      context: ./
     ports:
       - 8080:8080
     volumes: 
-      -$(PWD):/usr/app
+      - $PWD:/usr/app
 
